@@ -8,11 +8,12 @@
 </head>
 <body class="bg-gray-100 text-gray-800 font-sans">
 
+  <!-- Header -->
   <header class="bg-blue-800 text-white py-6">
     <div class="max-w-5xl mx-auto flex justify-between items-center px-4">
       <h1 class="text-2xl font-bold">Diego Cortés Morales</h1>
       <nav class="space-x-4">
-        <a href="index.html" class="hover:underline">Home</a>
+        <a href="index.html" class="hover:underline font-semibold">Home</a>
         <a href="cv.html" class="hover:underline">CV</a>
         <a href="publications.html" class="hover:underline">Publications</a>
         <a href="projects.html" class="hover:underline">Projects</a>
@@ -21,15 +22,32 @@
     </div>
   </header>
 
+  <!-- Main content -->
   <main class="max-w-4xl mx-auto p-6">
+
+    <!-- Profile section with photo -->
+    <section class="my-10 flex flex-col items-center text-center">
+      <img 
+        src="assets/diego.jpg" 
+        alt="Portrait of Diego Cortés Morales" 
+        class="w-40 h-40 rounded-full shadow-lg border-4 border-blue-800 object-cover mb-4"
+      >
+      <h2 class="text-3xl font-semibold mb-2">Diego Cortés Morales</h2>
+      <p class="text-lg text-gray-700">
+        Postdoctoral Researcher at the Mediterranean Institute of Advanced Studies (IMEDEA), Mallorca, Spain
+      </p>
+    </section>
+
+    <!-- About -->
     <section class="my-8">
-      <h2 class="text-3xl font-semibold mb-3">About Me</h2>
+      <h2 class="text-2xl font-semibold mb-3">About Me</h2>
       <p>
-        I am a postdoctoral researcher at the Mediterranean Institute of Advanced Studies (IMEDEA) in Majorca, Spain.
+        I am a postdoctoral researcher at the Mediterranean Institute of Advanced Studies (IMEDEA) in Mallorca, Spain.
         My research focuses on vertical ocean dynamics, Ekman layer processes, and observation-based velocity reconstructions.
       </p>
     </section>
 
+    <!-- Research interests -->
     <section class="my-8">
       <h2 class="text-2xl font-semibold mb-3">Research Interests</h2>
       <ul class="list-disc pl-6 space-y-2">
@@ -38,12 +56,15 @@
         <li>Observation-based velocity reconstruction and vorticity balance</li>
       </ul>
     </section>
+
   </main>
 
+  <!-- Footer -->
   <footer class="bg-gray-200 text-center py-4 mt-10">
     <p>&copy; 2025 Diego Cortés Morales. All rights reserved.</p>
   </footer>
 
 </body>
 </html>
+
 

@@ -175,43 +175,37 @@
         <div class="section-title">
             Skills
         </div>
-
-        <div class="skills-grid">
-
-            <div class="skill">
-                Python
+    
+        <div class="skills-slider">
+    
+            <!-- Flecha izquierda -->
+            <button class="arrow left" onclick="changeSkill(-1)">
+                ‹
+            </button>
+    
+            <!-- Contenido dinámico -->
+            <div class="skills-card">
+    
+                <h3 id="skills-category">Computing Skills</h3>
+    
+                <div id="skills-content" class="skills-grid">
+    
+                    <div class="skill">Python</div>
+                    <div class="skill">MATLAB</div>
+                    <div class="skill">NetCDF</div>
+                    <div class="skill">Data Analysis</div>
+    
+                </div>
+    
             </div>
-
-            <div class="skill">
-                MATLAB
-            </div>
-
-            <div class="skill">
-                Ocean Dynamics
-            </div>
-
-            <div class="skill">
-                Altimetry
-            </div>
-
-            <div class="skill">
-                NetCDF
-            </div>
-
-            <div class="skill">
-                Data Analysis
-            </div>
-
-            <div class="skill">
-                Scientific Writing
-            </div>
-
-            <div class="skill">
-                Lagrangian Methods
-            </div>
-
+    
+            <!-- Flecha derecha -->
+            <button class="arrow right" onclick="changeSkill(1)">
+                ›
+            </button>
+    
         </div>
-
+    
     </section>
 
     <section id="education" class="section">

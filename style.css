@@ -289,10 +289,13 @@ footer{
     height:180px;
     object-fit:cover;
     border-radius:50%;
-    margin-top:30px;
+    margin:30px auto 0;
+    display:block;
+
     border:5px solid white;
-    box-shadow:0 15px 35px rgba(0,0,0,0.15);
-    transition:transform .3s ease;
+    box-shadow:0 20px 40px rgba(0,0,0,0.15);
+
+    transition:transform 0.3s ease;
 }
 
 .profile-img:hover{

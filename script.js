@@ -34,3 +34,51 @@ reveal
 );
 
 reveal();
+
+const skillSets = [
+    {
+        title: "Computing Skills",
+        skills: ["Python", "MATLAB", "NetCDF", "Data Analysis"]
+    },
+    {
+        title: "Languages",
+        skills: ["Spanish (Native)", "English (Fluent)", "French (Basic)"]
+    },
+    {
+        title: "Soft Skills",
+        skills: ["Scientific Writing", "Teamwork", "Problem Solving", "Communication"]
+    }
+];
+
+let currentIndex = 0;
+
+function renderSkills() {
+
+    const category = document.getElementById("skills-category");
+    const content = document.getElementById("skills-content");
+
+    const current = skillSets[currentIndex];
+
+    category.textContent = current.title;
+
+    content.innerHTML = current.skills.map(skill =>
+        `<div class="skill">${skill}</div>`
+    ).join("");
+}
+
+function changeSkill(direction) {
+
+    currentIndex += direction;
+
+    if(currentIndex < 0){
+        currentIndex = skillSets.length - 1;
+    }
+
+    if(currentIndex >= skillSets.length){
+        currentIndex = 0;
+    }
+
+    renderSkills();
+}
+
+renderSkills();

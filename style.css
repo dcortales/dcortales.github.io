@@ -64,25 +64,38 @@ nav a{
 
 /* 🔵 HERO SUPERIOR CON BACKGROUND */
 .hero-top{
-    min-height:70vh;
+    min-height:75vh;
 
     background:
     linear-gradient(
-        rgba(255,255,255,0.5),
-        rgba(255,255,255,0.5)
+        rgba(255,255,255,0.85),
+        rgba(255,255,255,0.95)
     ),
-    url("assets/DSC_0007.JPG");
+    url("assets/DSC_0007.jpg");
 
     background-size:cover;
     background-position:center;
 
-    padding:0 20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    position:relative;
 }
 
 /* ⚪ HERO INFERIOR (solo imagen) */
 .hero-bottom{
-    min-height:40vh;
     background:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    /* 👇 clave del solapamiento */
+    margin-top:-80px;
+
+    position:relative;
+    z-index:10;
 }
 
 /* TEXTO */
@@ -108,11 +121,13 @@ nav a{
     height:280px;
     object-fit:cover;
     border-radius:50%;
-    display:block;
-    margin:auto;
 
-    border:5px solid black;
-    box-shadow:0 20px 40px rgba(0,0,0,0.15);
+    border:6px solid white;
+    transition:transform .3s ease;
+}
+
+.profile-img:hover{
+    transform:scale(1.05);
 }
 
 .hero-content{

@@ -284,24 +284,6 @@ footer{
     transform .8s ease;
 }
 
-.profile-img{
-    width:180px;
-    height:180px;
-    object-fit:cover;
-    border-radius:50%;
-    margin:30px auto 0;
-    display:block;
-
-    border:5px solid white;
-    box-shadow:0 20px 40px rgba(0,0,0,0.15);
-
-    transition:transform 0.3s ease;
-}
-
-.profile-img:hover{
-    transform:scale(1.05);
-}
-
 @media(max-width:768px){
 
     header{
@@ -330,6 +312,24 @@ footer{
     .hero-buttons{
 
         flex-direction:column;
+    }
+
+    .profile-img{
+    width:180px;
+    height:180px;
+    object-fit:cover;
+    border-radius:50%;
+    margin:30px auto 0;
+    display:block;
+
+    border:5px solid white;
+    box-shadow:0 20px 40px rgba(0,0,0,0.15);
+
+    transition:transform 0.3s ease;
+    }
+    
+    .profile-img:hover{
+        transform:scale(1.05);
     }
 
 }

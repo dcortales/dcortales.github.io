@@ -56,101 +56,102 @@ nav a{
 }
 
 .hero{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-}
 
-/* 🔵 HERO SUPERIOR CON BACKGROUND */
-.hero-top{
-    min-height:75vh;
+    min-height:100vh;
 
-    background:
-    linear-gradient(
-        rgba(255,255,255,0.85),
-        rgba(255,255,255,0.95)
-    ),
-    url("assets/DSC_0007.jpg");
+    background-image:url("assets/hero-bg.jpg");
 
     background-size:cover;
     background-position:center;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    background-attachment:fixed;
 
     position:relative;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+}
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,0.25);
 }
 
-/* ⚪ HERO INFERIOR (solo imagen) */
-.hero-bottom{
-    background:white;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    /* 👇 clave del solapamiento */
-    margin-top:-80px;
+.hero-overlay{
 
     position:relative;
+
+    z-index:2;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.subtitle{
+
+    color:white;
+
+    text-transform:uppercase;
+
+    letter-spacing:4px;
+
+    margin-bottom:15px;
+}
+
+.hero h1{
+
+    color:white;
+
+    font-size:5rem;
+
+    margin-bottom:30px;
+}
+
+.profile-img{
+
+    width:220px;
+    height:220px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:8px solid white;
+
+    margin-top:50px;
+
+    position:relative;
+
     z-index:10;
 }
 
-/* TEXTO */
-.hero-content{
-    max-width:800px;
-}
+.content-wrapper{
 
-.subtitle{
-    text-transform:uppercase;
-    letter-spacing:4px;
-    color:#2563eb;
-    margin-bottom:15px;
-}
+    background:white;
 
-.hero h1{
-    font-size:4rem;
-    margin-bottom:25px;
-}
+    width:100%;
 
-/* IMAGEN */
-.profile-img{
-    width:280px;
-    height:280px;
-    object-fit:cover;
-    border-radius:50%;
+    margin-top:-110px;
 
-    border:6px solid white;
-    transition:transform .3s ease;
-}
+    position:relative;
 
-.profile-img:hover{
-    transform:scale(1.05);
-}
+    z-index:5;
 
-.hero-content{
+    border-radius:40px 40px 0 0;
 
-    max-width:800px;
-}
+    padding-top:150px;
 
-.subtitle{
-
-    text-transform:uppercase;
-    letter-spacing:4px;
-
-    color:#2563eb;
-
-    margin-bottom:15px;
-}
-
-.hero h1{
-
-    font-size:5rem;
-    line-height:1.1;
-
-    margin-bottom:25px;
+    box-shadow:
+    0 -10px 40px rgba(0,0,0,0.08);
 }
 
 .description{

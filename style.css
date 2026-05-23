@@ -926,9 +926,9 @@ footer{
 
     background:#008080;
 
-    color:white;
+    color:white !important;
 
-    text-decoration:none;
+    text-decoration:none !important;
 
     font-size:0.9rem;
 

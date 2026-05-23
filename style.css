@@ -2485,39 +2485,7 @@ const icons = {
         </svg>
     `
 };
-🧱 2. MODIFICA tus skills
-Soft Skills (ejemplo)
-{
-    title: "Soft Skills",
-    skills: [
-        { text: "Data Visualisation", icon: "chart" },
-        { text: "Scientific Writing", icon: "pen" },
-        { text: "Problem Solving", icon: "brain" },
-        { text: "Oral Communication and Outreach", icon: "mic" },
-        { text: "Teamwork", icon: "users" }
-    ]
-}
-⚙️ 3. ACTUALIZA el render
-content.innerHTML = current.skills.map(skill => {
 
-    if (typeof skill === "object") {
-
-        return `
-            <div class="skill soft-skill">
-                <div class="skill-icon">
-                    ${icons[skill.icon]}
-                </div>
-                <div class="skill-text">
-                    ${skill.text}
-                </div>
-            </div>
-        `;
-    }
-
-    return `<div class="skill">${skill}</div>`;
-
-}).join("");
-🎨 4. CSS para los SVG
 .svg-icon{
 
     width:28px;

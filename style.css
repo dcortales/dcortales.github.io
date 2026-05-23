@@ -497,6 +497,2047 @@ details[open] .show-when-closed{
     margin-bottom:10px;
 }
 
+Yes. A clean way to do it is to create a "Selected Publications" section showing your most recent papers and then add a button linking to a dedicated publications.html page containing the full list.
+
+HTML (insert after Experience and before Skills)
+<section id="publications" class="section">
+
+    <div class="section-title">
+        Selected Publications
+    </div>
+
+    <div class="publications-container">
+
+        <div class="publication-card">
+
+            <h3>
+                Large-scale thermocline beta-plane geostrophic vertical circulation:
+                an intercomparison study
+            </h3>
+
+            <p class="authors">
+                Cortés Morales, D. et al.
+            </p>
+
+            <p class="journal">
+                Earth System Science Data (submitted)
+            </p>
+
+            <p>
+                Presentation of the OLIV3 observation-based vertical velocity product
+                derived from the Linear Vorticity Balance using ARMOR3D and ERA5.
+            </p>
+
+        </div>
+
+        <div class="publication-card">
+
+            <h3>
+                Observation-based diagnostics of ocean vertical motions
+            </h3>
+
+            <p class="authors">
+                Cortés Morales, D. et al.
+            </p>
+
+            <p class="journal">
+                Journal Name, 2025
+            </p>
+
+            <p>
+                Assessment of large-scale vertical circulation and comparison
+                against numerical ocean models.
+            </p>
+
+        </div>
+
+        <div class="publication-card">
+
+            <h3>
+                Ekman pumping and vertical dynamics from satellite observations
+            </h3>
+
+            <p class="authors">
+                Cortés Morales, D. et al.
+            </p>
+
+            <p class="journal">
+                Journal Name, 2024
+            </p>
+
+            <p>
+                Analysis of Ekman-driven vertical motions using observation-based
+                wind stress products.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="publications-button">
+
+        <a href="publications.html" class="btn primary">
+            View Full Publication List
+        </a>
+
+    </div>
+
+</section>
+CSS
+
+Add this to your style.css:
+
+.publications-container{
+
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+.publication-card{
+
+    background:#f8fafc;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    transition:.3s ease;
+}
+
+.publication-card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.publication-card h3{
+
+    margin-bottom:10px;
+
+    color:#111827;
+
+    font-size:1.2rem;
+}
+
+.authors{
+
+    color:#2563eb;
+
+    font-weight:500;
+
+    margin-bottom:5px;
+}
+
+.journal{
+
+    color:#6b7280;
+
+    font-style:italic;
+
+    margin-bottom:15px;
+}
+
+.publications-button{
+
+    margin-top:40px;
+
+    text-align:center;
+}
+Create a new page: publications.html
+
+Basic structure:
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Publications | Diego Cortés Morales</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<section class="section">
+
+    <div class="section-title">
+        Publications
+    </div>
+
+    <div class="publications-container">
+
+        <div class="publication-card">
+
+            <h3>
+                Large-scale thermocline beta-plane geostrophic vertical circulation:
+                an intercomparison study
+            </h3>
+
+            <p>
+                Cortés Morales, D., et al. (2025)
+            </p>
+
+            <a href="https://doi.org/xxxxx" target="_blank">
+                DOI
+            </a>
+
+        </div>
+
+        <!-- Add all publications here -->
+
+    </div>
+
+    <div style="margin-top:40px;text-align:center;">
+
+        <a href="index.html" class="btn secondary">
+            Back to Home
+        </a>
+
+    </div>
+
+</section>
+
+</body>
+</html>
+Alternative (recommended for researchers)
+
+Instead of manually maintaining publications.html, you can generate it automatically from your:
+
+ORCID profile
+Google Scholar profile
+BibTeX file exported from Zotero/Mendeley
+
+This way, adding a new publication only requires updating the bibliography file rather than editing HTML by hand.
+
+hero-content
+
+hero-content es simplemente una clase CSS contenedora que agrupa el contenido principal de la sección hero (nombre, subtítulo, botones, etc.).
+
+Por ejemplo, en tu HTML:
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <p class="subtitle">
+            Physical Oceanographer
+        </p>
+
+        <h1>
+            Diego Cortés Morales
+        </h1>
+
+        <div class="hero-buttons">
+            ...
+        </div>
+
+    </div>
+
+</section>
+
+La clase .hero-content se define en el CSS para controlar el ancho, alineación y posicionamiento del contenido:
+
+.hero-content{
+    max-width:800px;
+    margin:auto;
+    text-align:center;
+    position:relative;
+    z-index:2;
+}
+Si estás usando el diseño con fondo fijo
+
+Te recomiendo algo así:
+
+.hero-content{
+
+    max-width:900px;
+
+    width:100%;
+
+    margin:auto;
+
+    text-align:center;
+
+    position:relative;
+
+    z-index:2;
+
+    padding:0 20px;
+}
+¿Qué puedes poner dentro de hero-content?
+
+Normalmente:
+
+<div class="hero-content">
+
+    <p class="subtitle">
+        Physical Oceanographer
+    </p>
+
+    <h1>
+        Diego Cortés Morales
+    </h1>
+
+    <img src="assets/profile.jpg"
+         alt="Profile photo"
+         class="profile-img">
+
+    <div class="hero-buttons">
+
+        <a href="assets/cv.pdf" class="btn primary">
+            Download CV
+        </a>
+
+        <a href="#contact" class="btn secondary">
+            Contact
+        </a>
+
+    </div>
+
+</div>
+
+Si tu intención era mover la foto para que forme parte del bloque central y se superponga a la caja blanca inferior, puedo mostrarte exactamente cómo reorganizar el HTML y CSS para conseguir ese efecto.
+
+Puedes arreglar este código para que muestre dos botones para mostrar el abstract y el enlace al artículo:
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Publications | Diego Cortés Morales</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+      .show-when-open { display: none;}
+      details[open] .show-when-open {display: inline;}
+      details[open] .show-when-closed {display: none;}
+    </style>
+
+</head>
+
+<body>
+
+<section class="section">
+
+    <div class="section-title">
+        Publications
+    </div>
+
+    <div class="publications-container">
+
+        <div class="publication-card">
+
+            <h3>
+                Large-scale thermocline beta-plane geostrophic vertical circulation:
+                an intercomparison study
+            </h3>
+
+            <p>
+                Cortés Morales, D., et al. (2025)
+            </p>
+
+            <a href="https://doi.org/xxxxx" target="_blank">
+                DOI
+            </a>
+  
+  <!-- SINGLE DETAILS -->
+  <details class="w-full">
+
+    <!-- BUTTON ROW -->
+    <summary class="list-none cursor-pointer">
+
+      <div class="flex gap-3">
+
+        <!-- View abstract button -->
+        <div class="bg-gray-700 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors">
+
+          <span class="show-when-closed">View abstract</span>
+          <span class="show-when-open">Hide abstract</span>
+    
+        </div>
+
+        <!-- View paper button -->
+        <a href="https://doi.org/10.5194/sp-2025-17"
+           target="_blank"
+           class="bg-gray-700 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors"
+           onclick="event.stopPropagation();">
+          View paper
+        </a>
+
+      </div>
+
+    </summary>
+
+    <!-- EXPANDING CONTENT -->
+    <div class="mt-4 bg-white p-6 rounded-xl shadow-inner">
+
+        <!-- Figure -->
+
+        <!-- Abstract -->
+        <div>
+          <p class="text-sm text-justify leading-relaxed">
+          Mesoscale ocean variability plays a crucial role in regional circulation, 
+            heat transport, and the distribution of tracers such as nutrients, biological 
+            material, and pollutants. Mesoscale eddies are key drivers of this variability, 
+            and their observation (particularly of small-scale and coastal structures) 
+            has been limited by the resolution of conventional altimetry products. The 
+            Surface Water and Ocean Topography (SWOT) mission provides unprecedented 
+            high-resolution sea surface height data, offering new opportunities to refine 
+            mesoscale observations and improve our understanding of their impact on surface 
+            ocean dynamics. In this study, we assess the potential of a new product that 
+            incorporates SWOT wide-swath data and its improvements with respect to the current 
+            Copernicus Marine Environment Monitoring Service (CMEMS) satellite sea-level-derived 
+            velocity product. We analyze the eddy field in the western Mediterranean region, 
+            important for many different socio-economic activities like tourism, maritime 
+            transport, and fisheries and aquaculture. We identify differences not only in the 
+            number of eddies, but on their characteristics: size, intensity and associated kinetic 
+            energy. This is relevant for defining optimum marine traffic routes, but also for 
+            operational activities such as marine pollution management. To evaluate this impact, 
+            we analyse the retention capacity of Algerian Eddies, which in the past have been 
+            found relevant in the transport of marine debris between the North African coast and 
+            the Balearic Islands. Our findings evaluate how well SWOT-enhanced data affects the 
+            representation of mesoscale eddies and their velocity structures, showing important 
+            implications for ocean monitoring, climate studies, and marine ecosystem management.
+          </p>
+        </div>
+
+  </details>
+
+</div>
+        </div>
+
+        <!-- Add all publications here -->    
+
+    </div>
+
+    <div style="margin-top:40px;text-align:center;">
+
+        <a href="index.html" class="btn secondary">
+            Back to Home
+        </a>
+
+    </div>
+
+</section>
+
+</body>
+</html>
+
+Sí. El problema principal es que estás mezclando clases de Tailwind CSS (flex, gap-3, bg-gray-700, etc.) pero no has cargado Tailwind, así que esos estilos no hacen nada. Además, el <a> del DOI queda separado del bloque de botones y hay algunos cierres de div desalineados.
+
+Te propongo una versión limpia que funciona únicamente con tu style.css.
+
+HTML corregido
+<div class="publication-card">
+
+    <h3>
+        Large-scale thermocline beta-plane geostrophic vertical circulation:
+        an intercomparison study
+    </h3>
+
+    <p>
+        Cortés Morales, D., et al. (2025)
+    </p>
+
+    <details class="publication-details">
+
+        <summary>
+
+            <span class="pub-btn abstract-btn">
+
+                <span class="show-when-closed">
+                    View Abstract
+                </span>
+
+                <span class="show-when-open">
+                    Hide Abstract
+                </span>
+
+            </span>
+
+            <a href="https://doi.org/10.5194/sp-2025-17"
+               target="_blank"
+               class="pub-btn paper-btn"
+               onclick="event.stopPropagation();">
+
+                View Paper
+
+            </a>
+
+        </summary>
+
+        <div class="abstract-content">
+
+            <p>
+                Mesoscale ocean variability plays a crucial role in regional circulation,
+                heat transport, and the distribution of tracers such as nutrients,
+                biological material, and pollutants. Mesoscale eddies are key drivers
+                of this variability, and their observation (particularly of small-scale
+                and coastal structures) has been limited by the resolution of conventional
+                altimetry products. The Surface Water and Ocean Topography (SWOT) mission
+                provides unprecedented high-resolution sea surface height data, offering
+                new opportunities to refine mesoscale observations and improve our
+                understanding of their impact on surface ocean dynamics.
+
+                [...]
+
+                Our findings evaluate how well SWOT-enhanced data affects the
+                representation of mesoscale eddies and their velocity structures,
+                showing important implications for ocean monitoring, climate studies,
+                and marine ecosystem management.
+            </p>
+
+        </div>
+
+    </details>
+
+</div>
+CSS adicional
+
+Añade esto a tu style.css:
+
+.publication-details summary{
+
+    list-style:none;
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:20px;
+
+    cursor:pointer;
+}
+
+.publication-details summary::-webkit-details-marker{
+    display:none;
+}
+
+.pub-btn{
+
+    display:inline-block;
+
+    padding:10px 18px;
+
+    border-radius:8px;
+
+    background:#2563eb;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:0.95rem;
+
+    transition:0.3s;
+}
+
+.pub-btn:hover{
+
+    background:#1d4ed8;
+}
+
+.abstract-content{
+
+    margin-top:20px;
+
+    padding:20px;
+
+    background:#f8fafc;
+
+    border-radius:12px;
+
+    line-height:1.8;
+
+    text-align:justify;
+}
+
+.show-when-open{
+    display:none;
+}
+
+details[open] .show-when-open{
+    display:inline;
+}
+
+details[open] .show-when-closed{
+    display:none;
+}
+Resultado
+
+Obtendrás dos botones alineados:
+
+[ View Abstract ]   [ View Paper ]
+View Abstract abre/cierra el resumen y cambia automáticamente a Hide Abstract.
+View Paper abre el DOI en una pestaña nueva sin desplegar el abstract.
+Todo funciona sin JavaScript adicional y sin depender de Tailwind CSS.
+en este código, como puedo cambiar el espaciado al principio de la caja para que el texto aparezca más abajo:
+.hero-content{
+    max-width:1500px;
+    margin:auto;
+    text-align:center;
+    position:relative;
+    z-index:2;
+}
+
+Tienes varias opciones según el efecto que busques.
+
+Opción 1: Añadir espacio interior arriba (recomendado)
+.hero-content{
+    max-width:1500px;
+    margin:auto;
+    text-align:center;
+    position:relative;
+    z-index:2;
+
+    padding-top:100px;
+}
+
+Esto empuja todo el contenido interno (subtítulo, nombre, botones, etc.) hacia abajo.
+
+Opción 2: Mover toda la caja hacia abajo
+.hero-content{
+    max-width:1500px;
+    margin:auto;
+    text-align:center;
+    position:relative;
+    z-index:2;
+
+    transform:translateY(100px);
+}
+
+o
+
+.hero-content{
+    max-width:1500px;
+    margin:auto;
+    margin-top:100px;
+    text-align:center;
+    position:relative;
+    z-index:2;
+}
+
+Esto desplaza el bloque completo.
+
+Opción 3: Centrado vertical más controlado
+
+Si .hero-content está dentro de una sección .hero con display:flex, suele ser mejor controlar la posición desde el contenedor:
+
+.hero{
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+
+    align-items:flex-start;
+
+    padding-top:180px;
+}
+
+Así el contenido empieza más abajo dentro de toda la sección hero.
+
+Para tu diseño (nombre + foto sobre una imagen de fondo)
+
+La solución más limpia suele ser:
+
+.hero-content{
+    max-width:1500px;
+    margin:auto;
+    text-align:center;
+    position:relative;
+    z-index:2;
+
+    padding-top:120px;
+}
+
+o incluso:
+
+.hero-content{
+    max-width:1500px;
+    margin:auto;
+    text-align:center;
+    position:relative;
+    z-index:2;
+
+    padding-top:15vh;
+}
+
+Con 15vh el desplazamiento se adapta automáticamente al tamaño de la pantalla.
+
+Está dentro de esta sección:
+.hero-overlay{
+
+    position:relative;
+
+    z-index:2;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+Si .hero-content está dentro de .hero-overlay, lo más limpio es controlar la separación desde .hero-overlay, porque es el contenedor flex que organiza los elementos verticalmente.
+
+Por ejemplo:
+
+.hero-overlay{
+
+    position:relative;
+    z-index:2;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    padding-top:120px;
+}
+
+Esto empujará todo el contenido de la sección hero hacia abajo (incluyendo .hero-content y la foto si está dentro de .hero-overlay).
+
+Si solo quieres bajar el texto pero mantener la foto donde está, entonces añade margen superior a .hero-content:
+
+.hero-content{
+
+    max-width:1500px;
+    margin:auto;
+
+    margin-top:120px;
+
+    text-align:center;
+    position:relative;
+    z-index:2;
+}
+
+o
+
+.hero-content{
+
+    max-width:1500px;
+    margin:auto;
+
+    padding-top:120px;
+
+    text-align:center;
+    position:relative;
+    z-index:2;
+}
+Diferencia
+padding-top → añade espacio interno dentro de .hero-content.
+margin-top → desplaza el bloque completo hacia abajo.
+padding-top en .hero-overlay → mueve todos los elementos hijos del hero.
+
+Si me enseñas el HTML completo de la sección hero (incluyendo dónde está la foto y los botones), puedo decirte exactamente qué selector modificar para conseguir el efecto que buscas sin afectar al resto del diseño.
+
+Podrías arreglar el error en este código para que al clicar en view abstract aparezca el abstract y en view infography la infografía?
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Publications | Diego Cortés Morales</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+      .show-when-open {display: none;}
+      details[open] .show-when-open {display: inline;}
+      details[open] .show-when-closed {display: none;}
+    </style>
+
+</head>
+
+<body>
+
+<section class="section">
+
+    <div class="section-title">
+        Publications
+    </div>
+
+    <div class="publications-container">
+
+        <div class="publication-card">
+
+    <h3>
+        Large-scale thermocline beta-plane geostrophic vertical circulation:
+        an intercomparison study
+    </h3>
+
+    <p>
+        Cortés Morales, D., et al. (2025)
+    </p>
+
+    <details class="publication-details">
+
+        <summary>
+
+            <span class="pub-btn abstract-btn">
+
+                <span class="show-when-closed">
+                    View Abstract
+                </span>
+
+                <span class="show-when-open">
+                    Hide Abstract
+                </span>
+
+            </span>
+
+            <span class="pub-btn abstract-btn">
+
+                <span class="show-when-closed">
+                    View Infography
+                </span>
+
+                <span class="show-when-open">
+                    Hide Infography
+                </span>
+
+            </span>
+
+            <a href="https://doi.org/10.5194/sp-2025-17"
+               target="_blank"
+               class="pub-btn paper-btn"
+               onclick="event.stopPropagation();">
+
+                View Paper
+
+            </a>
+
+        </summary>
+
+        <div class="abstract-content">
+
+            <p>
+                Mesoscale ocean variability plays a crucial role in regional circulation,
+                heat transport, and the distribution of tracers such as nutrients,
+                biological material, and pollutants. Mesoscale eddies are key drivers
+                of this variability, and their observation (particularly of small-scale
+                and coastal structures) has been limited by the resolution of conventional
+                altimetry products. The Surface Water and Ocean Topography (SWOT) mission
+                provides unprecedented high-resolution sea surface height data, offering
+                new opportunities to refine mesoscale observations and improve our
+                understanding of their impact on surface ocean dynamics.
+
+                [...]
+
+                Our findings evaluate how well SWOT-enhanced data affects the
+                representation of mesoscale eddies and their velocity structures,
+                showing important implications for ocean monitoring, climate studies,
+                and marine ecosystem management.
+            </p>
+
+        </div>
+
+        <div class="abstract-content">
+
+            <p>
+                Infography text
+            </p>
+
+        </div>
+
+    </details>
+
+</div>
+        </div>
+
+        <!-- Add all publications here -->    
+
+    </div>
+
+    <div style="margin-top:40px;text-align:center;">
+
+        <a href="index.html" class="btn secondary">
+            Back to Home
+        </a>
+
+    </div>
+
+</section>
+
+</body>
+</html>
+
+El problema es que <details> solo tiene un único estado abierto/cerrado. Por tanto, los dos botones que has puesto dentro del mismo <summary> controlan exactamente la misma cosa. Cuando haces clic en cualquiera de ellos, se abre el mismo <details> y aparecen las dos cajas (abstract-content) a la vez.
+
+Para tener:
+
+View Abstract → muestra solo el abstract.
+View Infography → muestra solo la infografía.
+
+necesitas dos bloques <details> independientes.
+
+Solución recomendada
+<div class="publication-buttons">
+
+    <!-- ABSTRACT -->
+    <details class="publication-details">
+
+        <summary class="pub-btn">
+
+            <span class="show-when-closed">
+                View Abstract
+            </span>
+
+            <span class="show-when-open">
+                Hide Abstract
+            </span>
+
+        </summary>
+
+        <div class="abstract-content">
+
+            <p>
+                Mesoscale ocean variability plays a crucial role in regional circulation,
+                heat transport, and the distribution of tracers such as nutrients,
+                biological material, and pollutants...
+            </p>
+
+        </div>
+
+    </details>
+
+    <!-- INFOGRAPHY -->
+    <details class="publication-details">
+
+        <summary class="pub-btn">
+
+            <span class="show-when-closed">
+                View Infography
+            </span>
+
+            <span class="show-when-open">
+                Hide Infography
+            </span>
+
+        </summary>
+
+        <div class="abstract-content">
+
+            <img
+                src="assets/infography.png"
+                alt="Publication infography"
+                class="infography-image"
+            >
+
+        </div>
+
+    </details>
+
+    <!-- PAPER LINK -->
+    <a href="https://doi.org/10.5194/sp-2025-17"
+       target="_blank"
+       class="pub-btn paper-btn">
+
+        View Paper
+
+    </a>
+
+</div>
+CSS adicional
+.publication-buttons{
+
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
+.publication-details{
+
+    display:inline-block;
+}
+
+.publication-details summary{
+
+    list-style:none;
+    cursor:pointer;
+}
+
+.publication-details summary::-webkit-details-marker{
+    display:none;
+}
+
+.pub-btn{
+
+    display:inline-block;
+
+    padding:10px 18px;
+
+    border-radius:8px;
+
+    background:#2563eb;
+
+    color:white;
+
+    text-decoration:none;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.pub-btn:hover{
+    background:#1d4ed8;
+}
+
+.abstract-content{
+
+    margin-top:15px;
+
+    padding:20px;
+
+    background:#f8fafc;
+
+    border-radius:12px;
+
+    max-width:900px;
+}
+
+.infography-image{
+
+    max-width:100%;
+
+    height:auto;
+
+    border-radius:10px;
+}
+¿Por qué falla tu versión?
+
+Porque tenías:
+
+<details>
+
+    <summary>
+        View Abstract
+        View Infography
+    </summary>
+
+    <div>Abstract...</div>
+
+    <div>Infography...</div>
+
+</details>
+
+Un único <details> no puede saber qué botón has pulsado; simplemente abre todo su contenido. Para mostrar contenidos distintos necesitas dos <details> separados o un pequeño script JavaScript que muestre/oculte paneles específicos. La opción con dos <details> es la más simple y no requiere JavaScript.
+
+podrías poner la imagen de perfil por encima de la caja blanca? ahora mismo en el fichero .css tengo:
+.profile-img{
+
+    width:220px;
+    height:220px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:8px solid white;
+
+    margin-top:50px;
+
+    position:relative;
+
+    z-index:10;
+}
+
+Sí. El problema es que z-index: 10 solo funciona correctamente si la imagen y la caja blanca están en contextos de apilamiento compatibles. Normalmente la caja blanca (.content-wrapper) está subiendo con margin-top: -110px y puede estar quedando por encima de la foto.
+
+La solución más sencilla es subir la foto y darle un z-index claramente superior al de la caja blanca.
+
+Por ejemplo:
+
+.profile-img{
+
+    width:220px;
+    height:220px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:8px solid white;
+
+    position:relative;
+
+    z-index:100;
+
+    margin-top:50px;
+
+    transform:translateY(110px);
+}
+
+Y en la caja blanca:
+
+.content-wrapper{
+
+    background:white;
+
+    width:100%;
+
+    margin-top:-110px;
+
+    position:relative;
+
+    z-index:1;
+
+    border-radius:40px 40px 0 0;
+
+    padding-top:150px;
+}
+Método más limpio (recomendado)
+
+Si tu HTML es algo parecido a:
+
+<section class="hero">
+
+    <div class="hero-overlay">
+
+        <div class="hero-content">
+            ...
+        </div>
+
+        <img src="assets/profile.jpg"
+             class="profile-img">
+
+    </div>
+
+</section>
+
+<div class="content-wrapper">
+
+    ...
+    
+</div>
+
+Entonces puedes hacer que la foto "cuelgue" por debajo del hero:
+
+.profile-img{
+
+    width:220px;
+    height:220px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:8px solid white;
+
+    position:absolute;
+
+    bottom:-110px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    z-index:100;
+}
+
+Y asegúrate de que:
+
+.hero-overlay{
+    position:relative;
+}
+
+Así la foto queda exactamente a mitad entre el fondo y la caja blanca, sobresaliendo por encima de ambas, que es el efecto típico de portfolios hechos con Wix, Webflow o Squarespace.
+
+Si me pegas también el CSS de .hero, .hero-overlay y .content-wrapper, puedo decirte exactamente qué líneas modificar para que quede perfectamente centrada y superpuesta.
+
+quiero una separación de 25px entre las cajas:
+<section id="education" class="section">
+
+        <div class="section-title">
+            Education
+        </div>
+
+        <div class="edu-card">
+
+            <h3>
+                PhD in Climate, Atmospheric, Ocean, Terrestrial and Planetary Sciences
+            </h3>
+
+            <p>
+                 Large-Scale Vertical Velocities in the Global Open Ocean via Linear Vorticity Balance
+            </p>
+
+            <p class="authors">
+                Sorbonne Université, LOCEAN, Paris, France
+            </p>
+
+        </div>
+
+        <div class="edu-card">
+
+            <h3>
+                M.Sc. in Meteorology and Geophysics
+            </h3>
+
+            <p class="authors">
+                Universidad Complutense de Madrid, UCM, Madrid, Spain
+            </p>
+
+        </div>
+
+        <div class="edu-card">
+
+            <h3>
+                B.Sc. in Physics
+            </h3>
+
+            <p class="authors">
+                Universidad Autónoma de Madrid, UAM, Madrid, Spain
+            </p>
+
+        </div>
+
+    </section>
+
+La forma más sencilla es añadir un margen inferior a cada .edu-card.
+
+En tu style.css:
+
+.edu-card{
+
+    background:#f8fafc;
+
+    padding:40px;
+
+    border-radius:15px;
+
+    margin-bottom:25px;
+}
+Alternativa más moderna (recomendada)
+
+Agrupar las tarjetas en un contenedor flex o grid y usar gap.
+
+Por ejemplo:
+
+<section id="education" class="section">
+
+    <div class="section-title">
+        Education
+    </div>
+
+    <div class="education-container">
+
+        <div class="edu-card">
+            ...
+        </div>
+
+        <div class="edu-card">
+            ...
+        </div>
+
+        <div class="edu-card">
+            ...
+        </div>
+
+    </div>
+
+</section>
+
+Y en CSS:
+
+.education-container{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+}
+
+Con gap: 25px obtienes exactamente 25 px entre tarjetas y no tendrás que preocuparte por eliminar el margen de la última tarjeta. Esta suele ser la solución más limpia para diseños modernos.
+
+quiero que aparezca una línea horizontal debajo del 2026:
+<div class="section-title">
+        Publications
+    </div>
+
+    <div class="publications-container">
+
+        <h3 class="text-xl font-bold text-teal-800 border-b-2 border-golden-800 pb-1 mb-3">
+            2026
+        </h3> 
+
+        <div class="publication-card">
+
+    <h3>
+        Global Thermocline Vertical Velocities: A Novel Observation-Based Estimate
+    </h3>
+
+    <p class="authors">
+        D. Cortés-Morales, A. Lazar, D. Ruiz-Pino, and J. Mignot
+    </p>
+
+    <p class="journal">
+        Earth System Science Data (accepted), 2026
+    </p>
+            
+
+    <details class="publication-details">
+
+        <summary>
+
+            <span class="pub-btn abstract-btn">
+
+                <span class="show-when-closed">
+                    View Abstract
+                </span>
+
+                <span class="show-when-open">
+                    Hide Abstract
+                </span>
+
+            </span>
+
+            <a href="https://doi.org/10.5194/sp-2025-17"
+               target="_blank"
+               class="pub-btn paper-btn"
+               onclick="event.stopPropagation();">
+
+                View Infography
+
+            </a>
+
+            <a href="https://doi.org/10.5194/sp-2025-17"
+               target="_blank"
+               class="pub-btn paper-btn"
+               onclick="event.stopPropagation();">
+
+                View Paper
+
+            </a>
+
+        </summary>
+
+        <div class="abstract-content">
+
+            <p>
+                Vertical velocities at large scales are crucial for understanding ocean dynamics, influencing largescale
+                circulation and associated biochemical processes, yet their rationale is poorly understood, and their threedimensional
+                mean distribution and temporal variability are mainly known by models. This paper introduces
+                OLIV3 (Observation-based LInear Vorticity Vertical Velocities), a novel observation-based estimation product
+                of vertical velocities over the global thermocline. This product relies on the geostrophic linear vorticity balance
+                (LVB) applied to ARMOR3D observation-based meridional velocities with ERA5 Ekman pumping vertical velocity
+                as surface boundary condition. It covers the water column over 71 isopycnal levels, with 1=4° horizontal
+                resolution at annual frequency during the 1993–2019 period. Since the geostrophic LVB-derived vertical velocities
+                only capture the geostrophic component of the vertical velocity, their performance is tested using OGCM
+                numerical model data against the total vertical flow. In the thermocline, the LVB accurately reproduces the interannual
+                variability and captures the climatology of the large-scale total vertical flow (horizontal scales larger than
+                5°) with errors below 50% across the major ocean gyres. Focusing on surface-thermocline exchanges, one of
+                the most common applications that needs vertical velocities, OGCM results indicates that baroclinic geostrophic
+                vertical velocities are largely more accurate than the classic Ekman pumping proxy at estimating the interannual
+                variability of the total vertical flow in the ocean interior. OLIV3 capability to estimate real ocean vertical velocities
+                is assessed against three reference datasets: two reanalyses and the observation-based product OMEGA3D.
+                A strong spatial and temporal correlation is evidenced between OLIV3 and reanalysis datasets, in contrast to the
+                OMEGA3D, demonstrating even higher correlation than within themselves and supporting the dominance of the
+                geostrophic component of interannual variability of vertical movements. OLIV3 also reconstructs a baroclinic
+                vertical velocity field, consistent with the basin oceanographic concept of Sverdrup balance theory. By building
+                on theoretical advances made since the introduction of Sverdrup and Ekman transport theories, OLIV3 provides
+                a simplified yet physically consistent estimate of large-scale vertical transport. The OLIV3 dataset developed in
+                this study is available at https://doi.org/10.5281/zenodo.16962780 (Cortés-Morales and Lazar, 2025).
+            </p>
+
+        </div>
+
+    </details>
+
+</div>
+
+Ahora mismo estás intentando hacerlo con Tailwind:
+
+border-b-2 border-golden-800
+
+pero no te funciona probablemente porque no estás usando Tailwind CSS, sino tu propio style.css.
+
+✅ Solución correcta (CSS propio)
+Opción 1 (recomendada): línea debajo del 2026
+
+Añade esto a tu style.css:
+
+.year-title{
+
+    font-size:1.5rem;
+    font-weight:700;
+
+    color:#1f2937;
+
+    display:inline-block;
+
+    padding-bottom:6px;
+
+    border-bottom:2px solid #2563eb; /* azul tipo tu tema */
+}
+Y cambia tu HTML a esto:
+<h3 class="year-title">
+    2026
+</h3>
+🎯 Resultado
+
+Tendrás:
+
+2026
+───────  (línea azul debajo)
+⭐ Opción 2 (más elegante tipo “Wix”)
+
+Si quieres una línea más fina y centrada:
+
+.year-title{
+
+    font-size:1.6rem;
+    font-weight:700;
+
+    color:#1f2937;
+
+    display:inline-block;
+
+    position:relative;
+
+    padding-bottom:10px;
+}
+
+.year-title::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+    transform:translateX(-50%);
+
+    bottom:0;
+
+    width:60px;
+
+    height:2px;
+
+    background:#2563eb;
+}
+🧠 Diferencia clave
+border-bottom → línea completa del ancho del texto
+::after → línea centrada tipo diseño premium
+
+Si quieres, puedo ayudarte a 
+convertir todas las secciones de años (2026, 2025, 2024…) en un timeline vertical elegante estilo CV académico moderno, que queda mucho más profesional.
+
+tengo este código en el fichero .js y quisiera poner encima de cada idioma un emoji de la bandera del país:
+const skillSets = [
+    {
+        title: "Computing Skills",
+        skills: ["Python", "MATLAB", "NetCDF", "Data Analysis"]
+    },
+    {
+        title: "Languages",
+        skills: ["Spanish (Native)", "English (Proficient)", "French (Independent)", "Italian (Independent)", "Chinese (Independent)"]
+    },
+    {
+        title: "Soft Skills",
+        skills: ["Scientific Writing", "Teamwork", "Problem Solving", "Communication"]
+    }
+];
+
+Perfecto — esto se puede hacer de forma limpia, pero hay un detalle importante: no puedes “añadir emojis encima” solo con el array actual, porque ahora cada skill es un string plano.
+
+La solución correcta es convertir cada idioma en un objeto con texto + emoji.
+
+✅ SOLUCIÓN RECOMENDADA
+🔧 Modifica solo la parte de "Languages"
+{
+    title: "Languages",
+    skills: [
+        { text: "Spanish (Native)", flag: "🇪🇸" },
+        { text: "English (Proficient)", flag: "🇬🇧" },
+        { text: "French (Independent)", flag: "🇫🇷" },
+        { text: "Italian (Independent)", flag: "🇮🇹" },
+        { text: "Chinese (Independent)", flag: "🇨🇳" }
+    ]
+}
+⚙️ AHORA debes ajustar el render en JS
+
+Cambia esta parte:
+
+content.innerHTML = current.skills.map(skill =>
+    `<div class="skill">${skill}</div>`
+).join("");
+👉 por esta versión compatible:
+content.innerHTML = current.skills.map(skill => {
+
+    if (typeof skill === "object") {
+        return `<div class="skill">
+                    <span class="flag">${skill.flag}</span>
+                    ${skill.text}
+                </div>`;
+    }
+
+    return `<div class="skill">${skill}</div>`;
+
+}).join("");
+🎨 (Opcional) CSS para mejorar las banderas
+.flag{
+    margin-right:8px;
+    font-size:1.2rem;
+}
+🧠 Resultado
+
+Antes:
+
+Spanish (Native)
+English (Proficient)
+
+Ahora:
+
+🇪🇸 Spanish (Native)
+🇬🇧 English (Proficient)
+🇫🇷 French (Independent)
+⭐ Alternativa más avanzada (si quieres nivel “Wix pro”)
+
+Puedo mejorarlo aún más para que:
+
+las banderas aparezcan encima del texto (no a la izquierda)
+haya animación al cambiar de idioma
+o incluso 
+usar iconos SVG oficiales en lugar de emojis
+
+Solo dime 👍
+
+Mejora para que las banderas aparezcan encima del texto
+
+Perfecto, eso ya queda mucho más “portfolio premium”. Vamos a cambiar el diseño para que cada idioma sea una tarjeta vertical con bandera arriba y texto abajo.
+
+🧠 1. JS (solo idiomas)
+
+Mantén esto:
+
+{
+    title: "Languages",
+    skills: [
+        { text: "Spanish (Native)", flag: "🇪🇸" },
+        { text: "English (Proficient)", flag: "🇬🇧" },
+        { text: "French (Independent)", flag: "🇫🇷" },
+        { text: "Italian (Independent)", flag: "🇮🇹" },
+        { text: "Chinese (Independent)", flag: "🇨🇳" }
+    ]
+}
+
+Y deja el render así:
+
+content.innerHTML = current.skills.map(skill => {
+
+    if (typeof skill === "object") {
+
+        return `
+            <div class="skill language-skill">
+                <div class="flag-top">${skill.flag}</div>
+                <div class="skill-text">${skill.text}</div>
+            </div>
+        `;
+    }
+
+    return `<div class="skill">${skill}</div>`;
+
+}).join("");
+🎨 2. CSS (nuevo diseño vertical)
+
+Añade esto:
+
+.language-skill{
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    padding:20px;
+
+    text-align:center;
+}
+
+.flag-top{
+
+    font-size:2rem;
+
+    margin-bottom:10px;
+
+    line-height:1;
+}
+
+.skill-text{
+
+    font-weight:600;
+}
+✨ Resultado visual
+
+Antes:
+
+🇪🇸 Spanish (Native)
+
+Ahora:
+
+     🇪🇸
+Spanish (Native)
+🚀 Mejora opcional (nivel “Wix pro”)
+
+Si quieres hacerlo aún más elegante, puedes añadir:
+
+.language-skill{
+    transition:transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.language-skill:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+🧠 Qué has conseguido
+Diseño tipo “cards” verticales
+Bandera como elemento principal
+Texto secundario limpio
+Mejor jerarquía visual (muy usado en CVs modernos)
+
+Si quieres, el siguiente paso natural es:
+👉 
+convertir cada idioma en nivel tipo barra (A1–C2 estilo CEFR)
+👉 o 
+animación tipo “flip card” al pasar el cursor
+
+Solo dime 👍
+
+no me aparecen las banderas, solo las iniciales: ES, GB, FR...
+
+Eso es bastante típico: no estás viendo emojis de banderas, sino texto o fallback de sistema. Si te aparecen “ES, GB, FR”, significa que en algún punto se están renderizando como strings normales o tu sistema no está interpretando los emojis correctamente.
+
+Vamos a arreglarlo paso a paso.
+
+✅ 1. Asegúrate de que estás usando EMOJIS reales
+
+En tu JS debe ser exactamente así:
+
+flag: "🇪🇸"
+flag: "🇬🇧"
+flag: "🇫🇷"
+flag: "🇮🇹"
+flag: "🇨🇳"
+
+❌ NO esto:
+
+flag: "ES"
+flag: "GB"
+✅ 2. Verifica el render (IMPORTANTE)
+
+Debe ser así:
+
+content.innerHTML = current.skills.map(skill => {
+
+    if (typeof skill === "object") {
+
+        return `
+            <div class="skill language-skill">
+                <div class="flag-top">${skill.flag}</div>
+                <div class="skill-text">${skill.text}</div>
+            </div>
+        `;
+    }
+
+    return `<div class="skill">${skill}</div>`;
+
+}).join("");
+⚠️ 3. Si aún no salen las banderas
+
+Entonces el problema es uno de estos:
+
+🔴 Caso A: fuente o sistema sin soporte emoji
+
+Solución CSS:
+
+.flag-top{
+    font-size:2rem;
+    font-family: "Apple Color Emoji",
+                 "Segoe UI Emoji",
+                 "Noto Color Emoji",
+                 sans-serif;
+}
+🔴 Caso B: archivo no guardado en UTF-8
+
+Asegúrate de que tu HTML tenga:
+
+<meta charset="UTF-8">
+
+(ya lo tienes, pero importante confirmarlo)
+
+🔴 Caso C: estás usando “ES, GB” sin darte cuenta
+
+Revisa consola del navegador o tu JS real — muchas veces el problema es que no se actualizó el archivo.
+
+🧪 TEST rápido
+
+Copia esto en tu HTML temporalmente:
+
+<p>🇪🇸 🇬🇧 🇫🇷 🇮🇹 🇨🇳</p>
+
+Si esto tampoco funciona:
+👉 problema del navegador/fuente/sistema
+
+Si esto funciona:
+👉 problema en tu JS/render
+
+🧠 Conclusión
+
+En el 95% de casos es esto:
+
+estás usando "ES" en vez de "🇪🇸"
+o el JS no se actualizó
+o el render no está aplicando el objeto correctamente
+
+Si quieres, puedo darte una versión aún mejor con:
+👉 
+banderas SVG oficiales (100% fiables, sin emojis)
+👉 
+mejor estética tipo “cards académicas”
+👉 o incluso 
+hover con tooltip del nivel (C1, C2…)
+
+Solo dime 👍
+
+En Chrome no aparecen, pero en safari si
+
+Eso no es un fallo de tu código: es un tema clásico de renderizado de emojis entre navegadores.
+
+Chrome a veces no muestra bien las banderas emoji compuestas (🇪🇸 🇬🇧 etc.) dependiendo de:
+
+sistema operativo
+fuente emoji disponible
+versión de Chrome
+cómo se renderizan los “regional indicator symbols”
+
+Safari suele manejarlos mejor porque usa el sistema de Apple directamente.
+
+✅ SOLUCIÓN ROBUSTA (RECOMENDADA)
+👉 No uses emojis de banderas
+
+Usa SVG o imágenes de banderas, que funcionan siempre igual en todos los navegadores.
+
+🧱 OPCIÓN 1 (MEJOR): SVG FLAGS
+JS
+
+Cambia esto:
+
+flag: "🇪🇸"
+
+por esto:
+
+flag: "assets/flags/es.svg"
+HTML render
+content.innerHTML = current.skills.map(skill => {
+
+    if (typeof skill === "object") {
+
+        return `
+            <div class="skill language-skill">
+                <img class="flag-top" src="${skill.flag}" alt="flag">
+                <div class="skill-text">${skill.text}</div>
+            </div>
+        `;
+    }
+
+    return `<div class="skill">${skill}</div>`;
+
+}).join("");
+CSS
+.flag-top{
+    width:32px;
+    height:24px;
+    object-fit:cover;
+    margin-bottom:10px;
+}
+📁 DÓNDE CONSEGUIR FLAGS
+
+Puedes usar:
+
+https://flagcdn.com/
+https://github.com/lipis/flag-icons
+o descargar SVGs simples
+
+Ejemplo:
+
+assets/flags/es.svg
+assets/flags/gb.svg
+assets/flags/fr.svg
+assets/flags/it.svg
+assets/flags/cn.svg
+⚡ OPCIÓN 2 (rápida pero menos fiable)
+
+Forzar emojis con fuente:
+
+.flag-top{
+    font-size:2rem;
+
+    font-family:
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Noto Color Emoji",
+        "Twemoji Mozilla",
+        sans-serif;
+}
+
+👉 Esto puede mejorar Chrome, pero no es 100% seguro.
+
+🧠 RECOMENDACIÓN PROFESIONAL
+
+Para un CV académico / portfolio:
+
+✔ SVG flags (mejor opción)
+✔ consistente en todos los navegadores
+✔ más profesional que emojis
+✔ no depende del sistema operativo
+
+🚀 Si quieres subir nivel
+
+Puedo ayudarte a:
+
+añadir banderas con animación (flip o fade)
+tooltip con nivel de idioma (C2, C1…)
+diseño tipo “language cards de LinkedIn premium”
+o incluso cambiar el slider para que sea swipe en móvil
+
+Solo dime 👍
+
+quiero añadir un icono encima de cada una de estas skills como en el caso de languages:
+{
+        title: "Soft Skills",
+        skills: ["Data Visualisation","Scientific Writing", "Problem Solving", "Oral Communication and Outreach", "Teamwork"]
+    }
+
+Perfecto — aquí tienes la forma limpia de hacerlo, igual que con los idiomas.
+
+La idea es convertir los “soft skills” de strings a objetos con icono + texto.
+
+🧱 1. MODIFICA tu JS
+
+Cambia solo esta parte:
+
+{
+    title: "Soft Skills",
+    skills: [
+        { text: "Data Visualisation", icon: "📊" },
+        { text: "Scientific Writing", icon: "✍️" },
+        { text: "Problem Solving", icon: "🧠" },
+        { text: "Oral Communication and Outreach", icon: "🎤" },
+        { text: "Teamwork", icon: "🤝" }
+    ]
+}
+⚙️ 2. ACTUALIZA el render (IMPORTANTE)
+
+Si ya hiciste lo de languages, puedes usar el mismo sistema:
+
+content.innerHTML = current.skills.map(skill => {
+
+    if (typeof skill === "object") {
+
+        return `
+            <div class="skill soft-skill">
+                <div class="skill-icon">${skill.icon}</div>
+                <div class="skill-text">${skill.text}</div>
+            </div>
+        `;
+    }
+
+    return `<div class="skill">${skill}</div>`;
+
+}).join("");
+🎨 3. CSS para el estilo (icono encima)
+
+Añade:
+
+.soft-skill{
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    padding:20px;
+
+    text-align:center;
+}
+
+.skill-icon{
+
+    font-size:2rem;
+
+    margin-bottom:10px;
+
+    line-height:1;
+}
+
+.skill-text{
+
+    font-weight:600;
+}
+✨ Resultado visual
+
+Cada skill quedará así:
+
+    🧠
+Problem Solving
+
+    ✍️
+Scientific Writing
+
+    🤝
+Teamwork
+🚀 Mejora opcional (nivel portfolio premium)
+
+Si quieres hacerlo más elegante:
+
+.soft-skill{
+    transition:transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.soft-skill:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+🧠 Idea clave
+
+Ahora tienes 3 tipos de skills coherentes:
+
+💻 Computing → texto plano
+🌍 Languages → bandera arriba
+🤝 Soft skills → icono arriba
+
+Si quieres el siguiente nivel, puedo ayudarte a:
+👉 
+sustituir emojis por iconos SVG consistentes
+👉 o 
+convertir cada skill en “cards con categorías y colores” estilo Webflow/Wix profesional
+
+Solo dime 👍
+
+Ayúdame a sustituir emojis por iconos SVG consistentes
+
+Buena decisión — eso te va a dar un look mucho más profesional y consistente (y además evita problemas de compatibilidad entre Chrome/Safari).
+
+Te dejo una forma limpia, escalable y estándar de hacerlo.
+
+✅ OPCIÓN RECOMENDADA: SVG INLINE (sin dependencias)
+💡 Idea
+
+En vez de emojis, cada skill tendrá un icono SVG inline reutilizable.
+
+🧱 1. CREA una “librería” de iconos en JS
+
+Añade esto arriba de tu script.js:
+
+const icons = {
+
+    chart: `
+        <svg viewBox="0 0 24 24" class="svg-icon">
+            <path d="M3 3v18h18" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M7 15l3-4 3 2 4-6" fill="none" stroke="currentColor" stroke-width="2"/>
+        </svg>
+    `,
+
+    pen: `
+        <svg viewBox="0 0 24 24" class="svg-icon">
+            <path d="M12 20h9" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"
+                  fill="none" stroke="currentColor" stroke-width="2"/>
+        </svg>
+    `,
+
+    brain: `
+        <svg viewBox="0 0 24 24" class="svg-icon">
+            <path d="M8 12a4 4 0 1 1 8 0" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M6 8a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3z"
+                  fill="none" stroke="currentColor" stroke-width="2"/>
+        </svg>
+    `,
+
+    mic: `
+        <svg viewBox="0 0 24 24" class="svg-icon">
+            <path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v5a3 3 0 0 0 3 3z"
+                  fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M19 11a7 7 0 0 1-14 0" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M12 18v4" fill="none" stroke="currentColor" stroke-width="2"/>
+        </svg>
+    `,
+
+    users: `
+        <svg viewBox="0 0 24 24" class="svg-icon">
+            <path d="M16 11a4 4 0 1 0-8 0" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M4 21v-1a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v1"
+                  fill="none" stroke="currentColor" stroke-width="2"/>
+        </svg>
+    `
+};
+🧱 2. MODIFICA tus skills
+Soft Skills (ejemplo)
+{
+    title: "Soft Skills",
+    skills: [
+        { text: "Data Visualisation", icon: "chart" },
+        { text: "Scientific Writing", icon: "pen" },
+        { text: "Problem Solving", icon: "brain" },
+        { text: "Oral Communication and Outreach", icon: "mic" },
+        { text: "Teamwork", icon: "users" }
+    ]
+}
+⚙️ 3. ACTUALIZA el render
+content.innerHTML = current.skills.map(skill => {
+
+    if (typeof skill === "object") {
+
+        return `
+            <div class="skill soft-skill">
+                <div class="skill-icon">
+                    ${icons[skill.icon]}
+                </div>
+                <div class="skill-text">
+                    ${skill.text}
+                </div>
+            </div>
+        `;
+    }
+
+    return `<div class="skill">${skill}</div>`;
+
+}).join("");
+🎨 4. CSS para los SVG
+.svg-icon{
+
+    width:28px;
+    height:28px;
+
+    stroke:currentColor;
+    fill:none;
+
+    color:#2563eb;
+
+    margin-bottom:10px;
+}
+
+.skill-icon{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
 .skill-text{
 
     font-weight:600;

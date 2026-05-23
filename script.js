@@ -75,16 +75,29 @@ function renderSkills() {
 
     content.innerHTML = current.skills.map(skill => {
 
-    if (typeof skill === "object") {
+    // CASO 1: BANDERAS (Languages)
+    if (skill.flag) {
 
         return `
             <div class="skill language-skill">
-                <img class="flag-top" src="${skill.flag}" alt="flag">
+                <img class="skill-icon" src="${skill.flag}" alt="">
                 <div class="skill-text">${skill.text}</div>
             </div>
         `;
     }
 
+    // CASO 2: ICONOS (Soft + Computing)
+    if (skill.icon) {
+
+        return `
+            <div class="skill soft-skill">
+                <img class="skill-icon" src="${skill.icon}" alt="">
+                <div class="skill-text">${skill.text}</div>
+            </div>
+        `;
+    }
+
+    // CASO 3: fallback texto simple
     return `<div class="skill">${skill}</div>`;
 
 }).join("");

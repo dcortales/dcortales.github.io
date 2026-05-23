@@ -1,42 +1,4 @@
-const elements =
-document.querySelectorAll(
-'.section, .card, .skill'
-);
-
-function reveal() {
-
-    elements.forEach(el => {
-
-        const top =
-        el.getBoundingClientRect().top;
-
-        const visible =
-        window.innerHeight - 100;
-
-        if(top < visible){
-
-            el.classList.add('active');
-        }
-
-    });
-
-}
-
-elements.forEach(el => {
-
-    el.classList.add('reveal');
-
-});
-
-window.addEventListener(
-'scroll',
-reveal
-);
-
-reveal();
-
 const icons = {
-
     chart: `
         <svg viewBox="0 0 24 24" class="svg-icon">
             <path d="M3 3v18h18" fill="none" stroke="currentColor" stroke-width="2"/>
@@ -77,6 +39,43 @@ const icons = {
         </svg>
     `
 };
+
+const elements =
+document.querySelectorAll(
+'.section, .card, .skill'
+);
+
+function reveal() {
+
+    elements.forEach(el => {
+
+        const top =
+        el.getBoundingClientRect().top;
+
+        const visible =
+        window.innerHeight - 100;
+
+        if(top < visible){
+
+            el.classList.add('active');
+        }
+
+    });
+
+}
+
+elements.forEach(el => {
+
+    el.classList.add('reveal');
+
+});
+
+window.addEventListener(
+'scroll',
+reveal
+);
+
+reveal();
 
 const skillSets = [
     {

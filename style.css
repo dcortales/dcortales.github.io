@@ -282,21 +282,17 @@ nav a{
 
 .highlight-card{
 
-    background:#f8fafc;
+    text-align:center;
 
-    border-radius:16px;
+    display:flex;
 
-    padding:30px;
+    flex-direction:column;
 
-    display:grid;
-
-    grid-template-columns:120px 1fr;
+    justify-content:center;
 
     align-items:center;
 
-    transition:0.3s ease;
-
-    box-shadow:0 5px 20px rgba(0,0,0,0.05);
+    padding:35px;
 }
 
 .highlight-card:hover{
@@ -308,24 +304,18 @@ nav a{
 
 .highlight-number{
 
-    font-size:4rem;
+    font-size:4.5rem;
 
     font-weight:700;
 
     color:#008080;
 
-    text-align:left;
-
-    line-height:1;
+    margin-bottom:15px;
 }
 
 .highlight-text{
 
-    font-size:1rem;
-
     line-height:1.6;
-
-    color:#374151;
 }
 
 .publications-container{

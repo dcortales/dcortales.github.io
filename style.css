@@ -280,6 +280,20 @@ nav a{
     font-size:1.2rem;
 }
 
+.year-title{
+
+    font-size:1.5rem;
+    font-weight:700;
+
+    color:#1f2937;
+
+    display:inline-block;
+
+    padding-bottom:6px;
+
+    border-bottom:2px solid #2563eb; /* azul tipo tu tema */
+}
+
 .authors{
 
     color:#2563eb;

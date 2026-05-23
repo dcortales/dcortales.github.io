@@ -16,6 +16,14 @@
       details[open] .show-when-closed {display: none;}
     </style>
 
+    <style> 
+      .bg-teal-800 { background-color: #115e59 !important; }
+      .border-teal-800 { border-color: #115e59 !important; } 
+      .text-teal-700 { color: #008080 !important; } 
+      .text-teal-800 { color: #014D4E !important; } 
+      .border-golden-800 { border-color: #E7D192 !important; }
+    </style> 
+
 </head>
 
 <body>
@@ -28,16 +36,24 @@
 
     <div class="publications-container">
 
+        <h3 class="text-xl font-bold text-teal-800 border-b-2 border-golden-800 pb-1 mb-3">
+            2026
+        </h3> 
+
         <div class="publication-card">
 
     <h3>
-        Large-scale thermocline beta-plane geostrophic vertical circulation:
-        an intercomparison study
+        Global Thermocline Vertical Velocities: A Novel Observation-Based Estimate
     </h3>
 
     <p>
-        Cortés Morales, D., et al. (2025)
+        D. Cortés-Morales, A. Lazar, D. Ruiz-Pino, and J. Mignot
     </p>
+
+    <p>
+        <em>accepted in Earth System Science Data</em>, 2026.
+    </p>
+            
 
     <details class="publication-details">
 
@@ -78,22 +94,29 @@
         <div class="abstract-content">
 
             <p>
-                Mesoscale ocean variability plays a crucial role in regional circulation,
-                heat transport, and the distribution of tracers such as nutrients,
-                biological material, and pollutants. Mesoscale eddies are key drivers
-                of this variability, and their observation (particularly of small-scale
-                and coastal structures) has been limited by the resolution of conventional
-                altimetry products. The Surface Water and Ocean Topography (SWOT) mission
-                provides unprecedented high-resolution sea surface height data, offering
-                new opportunities to refine mesoscale observations and improve our
-                understanding of their impact on surface ocean dynamics.
-
-                [...]
-
-                Our findings evaluate how well SWOT-enhanced data affects the
-                representation of mesoscale eddies and their velocity structures,
-                showing important implications for ocean monitoring, climate studies,
-                and marine ecosystem management.
+                Vertical velocities at large scales are crucial for understanding ocean dynamics, influencing largescale
+                circulation and associated biochemical processes, yet their rationale is poorly understood, and their threedimensional
+                mean distribution and temporal variability are mainly known by models. This paper introduces
+                OLIV3 (Observation-based LInear Vorticity Vertical Velocities), a novel observation-based estimation product
+                of vertical velocities over the global thermocline. This product relies on the geostrophic linear vorticity balance
+                (LVB) applied to ARMOR3D observation-based meridional velocities with ERA5 Ekman pumping vertical velocity
+                as surface boundary condition. It covers the water column over 71 isopycnal levels, with 1=4° horizontal
+                resolution at annual frequency during the 1993–2019 period. Since the geostrophic LVB-derived vertical velocities
+                only capture the geostrophic component of the vertical velocity, their performance is tested using OGCM
+                numerical model data against the total vertical flow. In the thermocline, the LVB accurately reproduces the interannual
+                variability and captures the climatology of the large-scale total vertical flow (horizontal scales larger than
+                5°) with errors below 50% across the major ocean gyres. Focusing on surface-thermocline exchanges, one of
+                the most common applications that needs vertical velocities, OGCM results indicates that baroclinic geostrophic
+                vertical velocities are largely more accurate than the classic Ekman pumping proxy at estimating the interannual
+                variability of the total vertical flow in the ocean interior. OLIV3 capability to estimate real ocean vertical velocities
+                is assessed against three reference datasets: two reanalyses and the observation-based product OMEGA3D.
+                A strong spatial and temporal correlation is evidenced between OLIV3 and reanalysis datasets, in contrast to the
+                OMEGA3D, demonstrating even higher correlation than within themselves and supporting the dominance of the
+                geostrophic component of interannual variability of vertical movements. OLIV3 also reconstructs a baroclinic
+                vertical velocity field, consistent with the basin oceanographic concept of Sverdrup balance theory. By building
+                on theoretical advances made since the introduction of Sverdrup and Ekman transport theories, OLIV3 provides
+                a simplified yet physically consistent estimate of large-scale vertical transport. The OLIV3 dataset developed in
+                this study is available at https://doi.org/10.5281/zenodo.16962780 (Cortés-Morales and Lazar, 2025).
             </p>
 
         </div>

@@ -657,31 +657,43 @@ details[open] .show-when-closed{
 
 .projects-wrapper{
 
+    width:100vw;
+
+    margin-left:calc(-50vw + 50%);
+
     display:flex;
+
     align-items:center;
+
     gap:15px;
+
+    padding:0 40px;
 }
 
 .projects-carousel{
 
     display:flex;
-    gap:20px;
+
+    gap:25px;
 
     overflow-x:auto;
+
     scroll-behavior:smooth;
 
-    padding:10px;
-
     scroll-snap-type:x mandatory;
+
+    padding:20px 10px;
+
+    width:100%;
 }
 
 .project-card{
 
-    min-width:280px;
+    min-width:360px;
 
     background:#f8fafc;
 
-    padding:25px;
+    padding:30px;
 
     border-radius:16px;
 
@@ -689,12 +701,14 @@ details[open] .show-when-closed{
 
     scroll-snap-align:start;
 
+    position:relative;
+
     transition:0.3s ease;
 }
 
 .project-card:hover{
 
-    transform:translateY(-5px);
+    transform:translateY(-6px);
 }
 
 .project-card h3{
@@ -711,24 +725,40 @@ details[open] .show-when-closed{
     line-height:1.6;
 }
 
+.project-date{
+
+    position:absolute;
+
+    top:-12px;
+
+    left:20px;
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:6px 12px;
+
+    font-size:0.8rem;
+
+    border-radius:20px;
+
+    font-weight:600;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+}
+
 .project-arrow{
-
+    position:relative;
+    z-index:10;
     width:45px;
-
     height:45px;
-
     border-radius:50%;
-
     border:none;
-
     background:white;
-
     box-shadow:0 5px 15px rgba(0,0,0,0.1);
-
     cursor:pointer;
-
     font-size:22px;
-
     transition:0.3s;
 }
 
@@ -889,12 +919,12 @@ footer{
         font-size:3rem;
     }
 
-    .projects-wrapper{
-        gap:5px;
+    .project-card{
+        min-width:280px;
     }
 
-    .project-card{
-        min-width:240px;
+    .projects-wrapper{
+        padding:0 15px;
     }
 
     .dataproducts-grid{

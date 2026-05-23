@@ -269,6 +269,65 @@ nav a{
     gap:30px;
 }
 
+.highlights-grid{
+
+    margin-top:60px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+}
+
+.highlight-card{
+
+    background:#f8fafc;
+
+    border-radius:16px;
+
+    padding:30px;
+
+    display:grid;
+
+    grid-template-columns:120px 1fr;
+
+    align-items:center;
+
+    transition:0.3s ease;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
+
+.highlight-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.highlight-number{
+
+    font-size:4rem;
+
+    font-weight:700;
+
+    color:#2563eb;
+
+    text-align:center;
+
+    line-height:1;
+}
+
+.highlight-text{
+
+    font-size:1rem;
+
+    line-height:1.6;
+
+    color:#374151;
+}
+
 .publications-container{
 
     display:flex;
@@ -660,5 +719,21 @@ footer{
 
         flex-direction:column;
     }
+
+    .highlights-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .highlight-card{
+
+        grid-template-columns:90px 1fr;
+    }
+
+    .highlight-number{
+
+        font-size:3rem;
+    }
+}
 
 }

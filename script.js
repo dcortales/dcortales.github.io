@@ -42,7 +42,13 @@ const skillSets = [
     },
     {
         title: "Languages",
-        skills: ["Spanish (Native)", "English (Fluent)", "French (Basic)"]
+        skills: [
+            { text: "Spanish (Native)", flag: "🇪🇸" },
+            { text: "English (Proficient)", flag: "🇬🇧" },
+            { text: "French (Independent)", flag: "🇫🇷" },
+            { text: "Italian (Independent)", flag: "🇮🇹" },
+            { text: "Chinese (Independent)", flag: "🇨🇳" }
+        ]
     },
     {
         title: "Soft Skills",
@@ -61,9 +67,21 @@ function renderSkills() {
 
     category.textContent = current.title;
 
-    content.innerHTML = current.skills.map(skill =>
-        `<div class="skill">${skill}</div>`
-    ).join("");
+    content.innerHTML = current.skills.map(skill => {
+
+        if (typeof skill === "object") {
+    
+            return `
+                <div class="skill language-skill">
+                    <div class="flag-top">${skill.flag}</div>
+                    <div class="skill-text">${skill.text}</div>
+                </div>
+            `;
+        }
+    
+        return `<div class="skill">${skill}</div>`;
+    
+    }).join("");
 }
 
 function changeSkill(direction) {

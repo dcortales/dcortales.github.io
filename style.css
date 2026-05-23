@@ -492,16 +492,10 @@ details[open] .show-when-closed{
 }
 
 .flag-top{
-
-    font-size:2rem;
-
+    width:32px;
+    height:24px;
+    object-fit:cover;
     margin-bottom:10px;
-    font-family: "Apple Color Emoji",
-                     "Segoe UI Emoji",
-                     "Noto Color Emoji",
-                    "Twemoji Mozilla",
-                     sans-serif;
-    line-height:1;
 }
 
 .skill-text{

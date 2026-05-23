@@ -924,7 +924,7 @@ footer{
 
     border-radius:999px;
 
-    background:#2563eb;
+    background:#008080;
 
     color:white;
 
@@ -941,7 +941,7 @@ footer{
 
 .pill-btn:hover{
 
-    background:#1d4ed8;
+    background:#014D4E;
 
     transform:translateY(-2px);
 }

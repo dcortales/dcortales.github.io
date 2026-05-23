@@ -193,10 +193,22 @@ nav a{
     color:white;
 }
 
+.primaryteal{
+
+    background:#008080;
+    color:white;
+}
+
 .secondary{
 
     border:2px solid #2563eb;
     color:#2563eb;
+}
+
+.secondaryteal{
+
+    border:2px solid #008080;
+    color:#008080;
 }
 
 .btn:hover{

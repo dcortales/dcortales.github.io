@@ -52,7 +52,7 @@ const skillSets = [
     },
     {
         title: "Soft Skills",
-        skills: ["Data Visualisation","Scientific Writing", "Problem Solving", "Oral Communication", "Teamwork"]
+        skills: ["Data Visualisation","Scientific Writing", "Problem Solving", "Oral Communication and Outreach", "Teamwork"]
     }
 ];
 

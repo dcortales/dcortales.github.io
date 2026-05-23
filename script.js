@@ -119,3 +119,15 @@ function changeSkill(direction) {
 }
 
 renderSkills();
+
+function scrollProjects(direction){
+
+    const container = document.getElementById("projects-carousel");
+
+    const scrollAmount = 320;
+
+    container.scrollBy({
+        left: direction * scrollAmount,
+        behavior: "smooth"
+    });
+}

@@ -56,8 +56,8 @@ const skillSets = [
             { text: "Data Visualisation", icon: "assets/chart-scatter.svg" },
             { text: "Scientific Writing", icon: "assets/pencil-line.svg" },
             { text: "Problem Solving", icon: "assets/brain.svg" },
-            { text: "Oral Communication and Outreach", icon: "assets/mic.svg" },
-            { text: "Teamwork", icon: "assets/users.svg" }
+            { text: "Oral Communication", icon: "assets/mic.svg" },
+            { text: "Teamwork and Outreach", icon: "assets/users.svg" }
         ]
     }
 ];

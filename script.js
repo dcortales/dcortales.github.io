@@ -43,11 +43,11 @@ const skillSets = [
     {
         title: "Languages",
         skills: [
-            { text: "Spanish (Native)", flag: "🇪🇸" },
-            { text: "English (Proficient)", flag: "🇬🇧" },
-            { text: "French (Independent)", flag: "🇫🇷" },
-            { text: "Italian (Independent)", flag: "🇮🇹" },
-            { text: "Chinese (Basic)", flag: "🇨🇳" }
+            { text: "Spanish (Native)", flag: "assets/es.svg" },
+            { text: "English (Proficient)", flag: "assets/gb.svg" },
+            { text: "French (Independent)", flag: "assets/fr.svg" },
+            { text: "Italian (Independent)", flag: "assets/it.svg" },
+            { text: "Chinese (Basic)", flag: "assets/cn.svg" }
         ]
     },
     {
@@ -73,7 +73,7 @@ function renderSkills() {
     
             return `
                 <div class="skill language-skill">
-                    <div class="flag-top">${skill.flag}</div>
+                    <img class="flag-top" src="${skill.flag}" alt="flag">
                     <div class="skill-text">${skill.text}</div>
                 </div>
             `;

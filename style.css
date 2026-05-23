@@ -877,7 +877,7 @@ footer{
 
 .product-table-wrapper{
 
-    margin-top:15px;
+    margin-top:20px;
 
     display:flex;
 
@@ -888,11 +888,9 @@ footer{
 
     border-collapse:separate;
 
-    border-spacing:15px;
+    border-spacing:20px;
 
     text-align:center;
-
-    font-family:inherit;
 }
 
 .product-table th{
@@ -912,31 +910,40 @@ footer{
 
     color:#374151;
 
-    padding-right:10px;
+    padding-right:15px;
+
+    white-space:nowrap;
 }
 
-.circle-btn{
+/* BOTONES */
+.pill-btn{
 
     display:inline-block;
 
-    width:38px;
+    padding:8px 18px;
 
-    height:38px;
-
-    border-radius:50%;
+    border-radius:999px;
 
     background:#2563eb;
 
+    color:white;
+
+    text-decoration:none;
+
+    font-size:0.9rem;
+
+    font-weight:500;
+
     transition:0.3s ease;
 
-    box-shadow:0 4px 12px rgba(0,0,0,0.15);
+    box-shadow:0 4px 12px rgba(0,0,0,0.12);
 }
 
-.circle-btn:hover{
-
-    transform:scale(1.15);
+.pill-btn:hover{
 
     background:#1d4ed8;
+
+    transform:translateY(-2px);
 }
 
 @media(max-width:768px){

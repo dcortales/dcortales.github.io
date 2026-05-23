@@ -38,7 +38,7 @@ reveal();
 const skillSets = [
     {
         title: "Computing Skills",
-        skills: ["Python", "MATLAB", "NetCDF", "Data Analysis"]
+        skills: ["Python", "MATLAB", "Fortran", "Lyx/Latex","Github","Git","OceanDataView","R","C++"]
     },
     {
         title: "Languages",
@@ -52,7 +52,7 @@ const skillSets = [
     },
     {
         title: "Soft Skills",
-        skills: ["Scientific Writing", "Teamwork", "Problem Solving", "Communication"]
+        skills: ["Data Visualisation","Scientific Writing", "Problem Solving", "Oral Communication", "Teamwork"]
     }
 ];
 

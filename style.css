@@ -199,6 +199,12 @@ nav a{
     color:white;
 }
 
+.primarywhite{
+
+    background:white;
+    color:white;
+}
+
 .secondary{
 
     border:2px solid #2563eb;
@@ -209,6 +215,12 @@ nav a{
 
     border:2px solid #008080;
     color:#008080;
+}
+
+.secondarywhite{
+
+    border:2px solid white;
+    color:white;
 }
 
 .btn:hover{
@@ -303,12 +315,12 @@ nav a{
 
     padding-bottom:6px;
 
-    border-bottom:2px solid #2563eb; /* azul tipo tu tema */
+    border-bottom:2px solid #008080; /* azul tipo tu tema */
 }
 
 .authors{
 
-    color:#2563eb;
+    color:#008080;
 
     font-weight:500;
 
@@ -401,7 +413,7 @@ details[open] .show-when-closed{
 
 .date{
 
-    color:#2563eb;
+    color:#008080;
     font-weight:600;
 }
 

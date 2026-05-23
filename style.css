@@ -946,6 +946,16 @@ footer{
     transform:translateY(-2px);
 }
 
+.pill-btn,
+.pill-btn:visited,
+.pill-btn:hover,
+.pill-btn:active{
+
+    color:white;
+
+    text-decoration:none;
+}
+
 @media(max-width:768px){
 
     header{

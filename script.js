@@ -88,21 +88,6 @@ function renderSkills() {
     return `<div class="skill">${skill}</div>`;
 
 }).join("");
-    content.innerHTML = current.skills.map(skill => {
-
-        if (typeof skill === "object") {
-    
-            return `
-                <div class="skill soft-skill">
-                    <img class="skill-icon" src="${skill.icon}" alt="">
-                    <div class="skill-text">${skill.text}</div>
-                </div>
-            `;
-        }
-    
-        return `<div class="skill">${skill}</div>`;
-    
-    }).join("");
 }
 
 function changeSkill(direction) {

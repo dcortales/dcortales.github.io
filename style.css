@@ -813,6 +813,7 @@ footer{
     object-fit:contain;
 
     margin-bottom:10px;
+    align-items:center;
 }
 
 .dataproduct-card h3{
@@ -822,6 +823,7 @@ footer{
     font-size:1.2rem;
 
     color:#111827;
+    text-align:center;
 }
 
 .dataproduct-card p{

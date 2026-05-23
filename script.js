@@ -69,19 +69,19 @@ function renderSkills() {
 
     content.innerHTML = current.skills.map(skill => {
 
-        if (typeof skill === "object") {
-    
-            return `
-                <div class="skill language-skill">
-                    <img class="flag-top" src="${skill.flag}" alt="flag">
-                    <div class="skill-text">${skill.text}</div>
-                </div>
-            `;
-        }
-    
-        return `<div class="skill">${skill}</div>`;
-    
-    }).join("");
+    if (typeof skill === "object") {
+
+        return `
+            <div class="skill language-skill">
+                <img class="flag-top" src="${skill.flag}" alt="flag">
+                <div class="skill-text">${skill.text}</div>
+            </div>
+        `;
+    }
+
+    return `<div class="skill">${skill}</div>`;
+
+}).join("");
 }
 
 function changeSkill(direction) {

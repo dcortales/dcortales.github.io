@@ -53,8 +53,8 @@ const skillSets = [
     {
         title: "Soft Skills",
         skills: [
-            { text: "Data Visualisation", icon: "assets/chart.svg" },
-            { text: "Scientific Writing", icon: "assets/pen.svg" },
+            { text: "Data Visualisation", icon: "assets/chart-scatter.svg" },
+            { text: "Scientific Writing", icon: "assets/pencil_line.svg" },
             { text: "Problem Solving", icon: "assets/brain.svg" },
             { text: "Oral Communication and Outreach", icon: "assets/mic.svg" },
             { text: "Teamwork", icon: "assets/users.svg" }

@@ -116,8 +116,8 @@ nav a{
 
 .profile-img{
 
-    width:220px;
-    height:220px;
+    width:250px;
+    height:250px;
 
     object-fit:cover;
 
@@ -129,7 +129,7 @@ nav a{
 
     position:relative;
 
-    z-index:10;
+    z-index:100;
 }
 
 .content-wrapper{

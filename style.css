@@ -550,6 +550,18 @@ details[open] .show-when-closed{
     height:32px;
 }
 
+.soft-skill{
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    padding:20px;
+}
+
 .skill-text{
 
     font-weight:600;

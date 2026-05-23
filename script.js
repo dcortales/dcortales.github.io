@@ -47,7 +47,7 @@ const skillSets = [
             { text: "English (Proficient)", flag: "🇬🇧" },
             { text: "French (Independent)", flag: "🇫🇷" },
             { text: "Italian (Independent)", flag: "🇮🇹" },
-            { text: "Chinese (Independent)", flag: "🇨🇳" }
+            { text: "Chinese (Basic)", flag: "🇨🇳" }
         ]
     },
     {

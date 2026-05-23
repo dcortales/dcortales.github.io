@@ -532,31 +532,6 @@ details[open] .show-when-closed{
     font-size:1.2rem;
 }
 
-.authors{
-
-    color:#2563eb;
-
-    font-weight:500;
-
-    margin-bottom:5px;
-}
-
-.journal{
-
-    color:#6b7280;
-
-    font-style:italic;
-
-    margin-bottom:15px;
-}
-
-.publications-button{
-
-    margin-top:40px;
-
-    text-align:center;
-}
-
 .svg-icon{
 
     width:28px;

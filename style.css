@@ -1012,6 +1012,69 @@ footer{
     .dataproducts-grid{
         grid-template-columns:1fr;
     }
+
+
+    .dataproducts-grid{
+
+    grid-template-columns:1fr;
+
+    gap:20px;
+}
+
+.dataproduct-card{
+
+    padding:20px;
+
+    gap:15px;
+}
+
+.dataproduct-logo{
+
+    width:90px;
+
+    height:90px;
+}
+
+.dataproduct-card h3{
+
+    font-size:1.05rem;
+
+    line-height:1.4;
+}
+
+.dataproduct-card p{
+
+    font-size:0.95rem;
+
+    text-align:center;
+}
+
+.dataproduct-card a{
+
+    font-size:0.9rem;
+
+    word-break:break-word;
+}
+
+.product-table-wrapper{
+
+    overflow-x:auto;
+}
+
+.product-table{
+
+    width:100%;
+
+    border-spacing:10px;
+}
+
+.pill-btn{
+
+    padding:6px 14px;
+
+    font-size:0.8rem;
+}
+    
 }
 
 }

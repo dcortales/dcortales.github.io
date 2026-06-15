@@ -987,7 +987,15 @@ footer{
 
     .hero-buttons{
 
-        flex-direction:column;
+        display:flex;
+    
+        flex-direction:row;
+    
+        gap:12px;
+    
+        justify-content:center;
+    
+        flex-wrap:wrap;
     }
 
     .highlights-grid{

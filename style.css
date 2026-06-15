@@ -985,6 +985,12 @@ footer{
 
     }
 
+    .hero{
+
+        min-height:70vh;  /* antes suele ser 100vh */
+
+    }
+
     .hero h1{
         font-size:3rem; /* ajusta a gusto */
         line-height:1.2;
@@ -992,7 +998,7 @@ footer{
     
 
     body{
-        padding-top:50px; 
+        padding-top:40px; 
     }
 
     .timeline-item{

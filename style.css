@@ -976,6 +976,10 @@ footer{
         font-size:3rem;
     }
 
+    body{
+        padding-top:120px; 
+    }
+
     .timeline-item{
 
         grid-template-columns:1fr;
